@@ -27,14 +27,20 @@
             </div>
             <div class="block_recette">
                 <div class="ingre">
-                    <p>Cout: {% for recipe in recipes %}
-                                {{ recipe.cost }}
-                                    {% endfor %}</p>
-                    <p>Nb de Personnes:</p>
+                    <p>Cout: {% for recipes in recipe %}
+                                {{ recipes.cost }}
+                                    </p>
+                    <p>Nb de Personnes:
+                                {{ recipes.people }}
+                                    </p>
                 </div>
                 <div class="prepa">
-                    <p>Difficulté :</p>
-                    <p>Temps de préparation:</p>
+                    <p>Difficulté :
+                                {{ recipes.difficulty }}
+                            </p>
+                    <p>Temps de préparation: 
+                                {{ recipes.time }}
+                                    {% endfor %}</p>
                 </div>
             </div>
         </div>

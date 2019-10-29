@@ -11,7 +11,7 @@ class recetteController extends AbstractController
 
 {
     /**
-     * @Route("/accueil", name="accueil")
+     * @Route("/", name="accueil")
      */
 
     public function accueil()
@@ -22,14 +22,15 @@ class recetteController extends AbstractController
     }
 
     /**
-     * @Route("/", name="recipes")
+     * @Route("/index1", name="recipes")
      */
     public function index1()
     {
         $rec = $this->getDoctrine()->getRepository(Recipe::class);
         $recipes = $rec->findAll();
-        return $this->render("index1.html.twig");
-     
+        return $this->render("index1.html.twig", [
+            "controller_name" => "recetteController", "recipe" => $recipes,
+        ]);
     }
 
     /**
