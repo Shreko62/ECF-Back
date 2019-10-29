@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet"/>
+     <link rel="icon" type="image/png" href="img/icon.png"/>
+    <title>Les Entrées</title>
+</head>
+
+<body>
+<div class="header">
+        <div class="logo">
+
+        </div>
+    </div>
+    <div class="bar">
+        <p class="bar_text_index">Les Entrées</p>
+    </div>
+
+    <div class="recette">
+        <div class="type">
+            <div class="img_type_pate"></div>
+            <div class="manger">
+                <p>Paté en croute</p>
+            </div>
+            <div class="block_recette">
+                <div class="ingre">
+                    <p>Cout: {% for recipe in recipes %}
+                                {{ recipe.cost }}
+                                    {% endfor %}</p>
+                    <p>Nb de Personnes:</p>
+                </div>
+                <div class="prepa">
+                    <p>Difficulté :</p>
+                    <p>Temps de préparation:</p>
+                </div>
+            </div>
+        </div>
+     
+</body>
+</html>
